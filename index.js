@@ -10,12 +10,12 @@ app.use(bodyParser.json());
 app.use("/", router);
 
 router.get("/", (req, res) => {
-    res.sendFile(`${path}/web-client/index.html`);
+    res.sendFile(`${path}/web-client/react.html`);
 });
 
-router.get("/app.js", (req, res) => {
-    res.sendFile(`${path}/web-client/app.js`);
-});
+// router.get("/app.js", (req, res) => {
+//     res.sendFile(`${path}/web-client/app.js`);
+// });
 
 app.listen(_webPort, () => {
     console.log(`web server running on ${_webPort}`);
